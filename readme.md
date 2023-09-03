@@ -1,4 +1,4 @@
-# Webprogramozás - PTI BSc nappali 2. kurzus
+# Webprogramozás - PTI BSc nappali 2-es kurzus
 
 ## Tematika
 
@@ -7,7 +7,7 @@
 |2023. 09. xx.|Bevezetés, JS alapok|
 |2023. 09. xx.|DOM, eseménykezelés |
 
-## ![Követelmények]()
+## ![Követelmények](https://github.com/Valentinusz/webprog-2023-24-1-5)
 
 ## ![5-ös kurzus github repoja]()
 
