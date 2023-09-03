@@ -19,9 +19,9 @@
 |12.  |2023. 12. 03.|CRUD alkalmazás összerakása|
 |13.  |2023. 12. 10.|AJAX                       |
 
-## ![Követelmények](https://github.com/Valentinusz/webprog-2023-24-1-5)
+## ![Követelmények]()
 
-## ![5-ös kurzus github repoja]()
+## ![5-ös kurzus github repoja](https://github.com/Valentinusz/webprog-2023-24-1-5)
 
 ## Konzultáció
 Az kurzushoz heti egy 45 perc konzultáció tartozik. Én ezt "tömbösítve" tartanám a számonkérések előtt.
