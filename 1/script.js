@@ -1,6 +1,6 @@
 // INFORMÁCIÓK
 // JS doksi: https://developer.mozilla.org/en-US/docs/Web/JavaScript
-// GitHub: https://github.com/Valentinusz/webprog-2023-24-1-5
+// GitHub: https://github.com/Valentinusz/webprog-2023-24-1-2
 // Canvas: https://canvas.elte.hu/courses/38953
 
 // JS
