@@ -63,9 +63,44 @@ thirdTaskDiv.appendChild(table)
 
 // 6. Adott két szöveges beviteli mező és köztük egy gomb.
 // A gomb lenyomására másold át az egyik szöveges beviteli mező tartalmát a másikba!
+const fifthTaskDiv = document.querySelector('article:nth-of-type(5)');
+
+// elemen belül is lehet keresni
+const firstInput = fifthTaskDiv.querySelector('label input');
+const secondInput = fifthTaskDiv.querySelector('label:nth-of-type(2) input');
+const copyButton = fifthTaskDiv.querySelector('button');
+console.log(firstInput, secondInput);
+
+copyButton.addEventListener('click', () => {
+    if (firstInput.value) {
+        // value attribútum írható
+        secondInput.value = firstInput.value;
+    } else {
+        firstInput.value = secondInput.value;
+    }
+})
 
 // 7. Egy űrlapon csak akkor kérd be a leánykori nevet, ha nő az illető! Használd a rádiógombok click eseményét!
 // A megjelenítéshez, eltűntetéshez használd az elemek hidden tulajdonságát!
+const personForm = document.querySelector('form');
+const maleButton = personForm.querySelector('input[type="radio"]#male');
+const femaleButton = personForm.querySelector('input[type="radio"]#female');
+console.log(maleButton, femaleButton);
+
+const maidenNameInput = personForm.querySelector('input#maiden-name');
+const maidenNameLabel = personForm.querySelector('label[for="maiden-name"]');
+console.log(maidenNameInput, maidenNameLabel);
+
+const toggleMaidenName = () => {
+    // checked = rádiógomb ki van-e választva
+    maidenNameInput.hidden = maleButton.checked;
+    maidenNameLabel.hidden = maleButton.checked;
+}
+
+maleButton.addEventListener('click', toggleMaidenName);
+femaleButton.addEventListener('click', toggleMaidenName);
+
+toggleMaidenName();
 
 // 8. Oldalbetöltéskor listázd ki az oldal összes hiperhivatkozásának a címét!
 
