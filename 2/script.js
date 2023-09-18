@@ -102,14 +102,99 @@ femaleButton.addEventListener('click', toggleMaidenName);
 
 toggleMaidenName();
 
-// 8. Oldalbetöltéskor listázd ki az oldal összes hiperhivatkozásának a címét!
+// 8. Oldalbetöltéskor listázd ki az oldal összes hiperhivatkozásának a címét (href)!
+// NodeList != Tömb
+const links = document.querySelectorAll('a');
+const linksList = document.querySelector('ul#links');
+console.log(links);
+
+// kiválasztani hova akarjuk tenni a linkeket
+links.forEach(({href}) => {
+    // végigmenni a linkeken és kiírni a címeket
+    const item = document.createElement('li');
+    item.innerText = href;
+    linksList.appendChild(item);
+
+})
 
 // 10. Készíts egy számlálót komponenst!
+const incrementButton = document.querySelector('button#inc');
+const counter = document.querySelector('h3#counter');
+const decrementButton = document.querySelector('button#dec');
+console.log(incrementButton, counter, decrementButton);
+
+const lowerBound = -5;
+const upperBound = 5;
+
+let counterValue = 0;
+
+const increment = () => {
+    if (counterValue < upperBound) {
+        counterValue++;
+        counter.innerText = counterValue;
+    }
+    incrementButton.disabled = upperBound === counterValue;
+    decrementButton.disabled = lowerBound === counterValue;
+}
+
+const decrement = () => {
+    if (counterValue > lowerBound) {
+        counterValue--;
+        counter.innerText = counterValue;
+    }
+    incrementButton.disabled = upperBound === counterValue;
+    decrementButton.disabled = lowerBound === counterValue;
+}
+
+incrementButton.addEventListener('click', increment);
+decrementButton.addEventListener('click', decrement);
 
 // 12. Készíts webes alkalmazást kamatos kamat számolására.
 // A számoláshoz meg kell adni a kiindulási összeget, a kamat értékét, valamint azt, hány évvel későbbi összegre vagyunk
 // kíváncsiak. Minden év végén adjuk hozzá a kamatot a tőkéhez, és a következő évben az képezi a kamatozás alapját.
 // A feladat során jelenítsük meg azt is, hogy melyik évben hogyan változik az összeg.
+const moneyInput = document.querySelector("input#money");
+const interestInput = document.querySelector("input#interest");
+const yearInput = document.querySelector("input#year");
+console.log(
+    moneyInput, interestInput, yearInput
+);
+
+const calculateButton = document.querySelector("button#calculate");
+console.log(calculateButton);
+
+const interestTableBody = document.querySelector("table#interestTable tbody");
+console.log(interestTableBody);
+
+calculateButton.addEventListener('click', () => {
+    // "állapottér"
+    let money = Number.parseInt(moneyInput.value, 10);
+    const interest = Number.parseFloat(interestInput.value, 10);
+    const year = Number.parseInt(yearInput.value, 10);
+
+    while (interestTableBody.firstChild) {
+        interestTableBody.firstChild.remove();
+    }
+
+    for (let index = 0; index <= year; index++) {
+        const row = document.createElement('tr');
+
+        const yearCell = document.createElement('td');
+        yearCell.innerText = index;
+
+        const moneyCell = document.createElement('td');
+        moneyCell.innerText = money;
+
+        money *= (1 + (interest / 100));
+
+        row.appendChild(yearCell);
+        row.appendChild(moneyCell);
+
+        interestTableBody.appendChild(row);
+    }
+
+    console.log(money, interest, year);
+})
 
 // 14. Adott egy könyvtári nyilvántartás. Egy könyvről a következő adatokat tároljuk:
 // szerző cím kiadás éve kiadó ISBN szám
