@@ -1,5 +1,3 @@
-import {PixelArtApp} from "./PixelArtApp.js";
-
-
+import {PixelArtApp} from "./src/PixelArtApp.js";
 
 document.body.appendChild(PixelArtApp());
