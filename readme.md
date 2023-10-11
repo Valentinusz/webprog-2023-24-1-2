@@ -19,9 +19,9 @@
 |12.  |2023. 12. 03.|AJAX I.|
 |13.  |2023. 12. 10.|AJAX II.                      |
 
-## ![Követelmények](https://canvas.elte.hu/courses/38953/pages/kovetelmenyek?module_item_id=546551)
+## [Követelmények](https://canvas.elte.hu/courses/38953/pages/kovetelmenyek?module_item_id=546551)
 
-## ![5-ös kurzus github repoja](https://github.com/Valentinusz/webprog-2023-24-1-5)
+## [5-ös kurzus github repoja](https://github.com/Valentinusz/webprog-2023-24-1-5)
 
 ## Konzultáció
 Az kurzushoz heti egy 45 perc konzultáció tartozik. Én ezt "tömbösítve" tartanám a számonkérések előtt.
