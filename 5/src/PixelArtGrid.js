@@ -7,7 +7,6 @@
  * @param initialGrid {PixelArtEditorGrid|undefined} Optional. An already created grid to load.
  * @param handleSave {!Function} Function to be run when the save button is clicked.
  * @returns {HTMLDivElement}
- * @constructor
  */
 export function PixelArtGrid({width, height, initialGrid, handleSave}) {
     // ÁLLAPOTTÉR

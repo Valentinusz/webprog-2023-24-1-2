@@ -3,7 +3,7 @@ import {PixelArtGrid} from "./PixelArtGrid.js";
 import {makeGalleryContent, PixelArtGallery} from "./PixelArtGallery.js";
 
 /**
- * Simple app for drawing pixel arts.
+ * App for drawing pixel arts.
  * @returns {HTMLElement} a html element containing all elements needed by the app.
  * @constructor
  */
