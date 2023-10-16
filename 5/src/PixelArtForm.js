@@ -5,7 +5,6 @@
  * @param maxValue {!number} maximum value of the input fields.
  * @param handleSubmit {function} function to execute when the form is submitted.
  * @returns {HTMLFormElement} a form element.
- * @constructor
  */
 export function PixelArtForm({minValue = 0, maxValue= Infinity, handleSubmit}) {
     const form = document.createElement('form');

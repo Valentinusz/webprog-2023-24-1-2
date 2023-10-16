@@ -12,11 +12,7 @@ export function PixelArtApp() {
     /** @typedef {string[][]} PixelArtEditorGrid */
     /** @typedef {{id: number, grid: PixelArtEditorGrid}} PixelArt */
     /** @type {PixelArt[]} */
-    const pixelArts = [
-        {id: 1, grid: [['#FFF', '#000', '#FFF'], ['#FFF', '#000', '#FFF'], ['#000', '#000', '#000']]},
-        {id: 2, grid: [['#000', '#000', '#000'], ['#FFF', '#000', '#FFF'], ['#FFF', '#000', '#FFF']]},
-        {id: 3, grid: [['#000', '#000', '#000'], ['#FFF', '#FFF', '#FFF'], ['#FFF', '#000', '#FFF']]}
-    ];
+    const pixelArts = JSON.parse(localStorage.getItem('arts')) ?? [];
 
     /** @type {PixelArt} Currently selected entry from the pixel arts array. */
     let selectedArt = undefined;
@@ -33,6 +29,7 @@ export function PixelArtApp() {
             pixelArts.push(selectedArt);
         }
         pixelArtGallery.innerHTML = makeGalleryContent(pixelArts);
+        localStorage.setItem("arts", JSON.stringify(pixelArts));
     }
 
     // FELÜLET

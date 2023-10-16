@@ -5,7 +5,6 @@ import {makeGridContent} from "./PixelArtGrid.js";
  *
  * @param arts pixel arts to show.
  * @returns {HTMLOListElement} Ordered list containing previews of the pixel arts.
- * @constructor
  */
 export function PixelArtGallery(arts) {
     const ol = document.createElement('ol');
