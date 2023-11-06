@@ -1,1 +1,0 @@
-export const random = (a, b) => Math.floor(Math.random() * (b-a+1) + a);
