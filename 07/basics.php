@@ -95,3 +95,4 @@ echo '</br>';
 
 var_dump($arr2);
 
+$str4 = "a" . "b";
