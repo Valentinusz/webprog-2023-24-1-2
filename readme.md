@@ -10,14 +10,14 @@
 |4.   |2023. 10. 02.|CsoportZH    |
 |5.   |2023. 10. 09.|Összetett alkalmazás, kódszervezés       |
 |6.   |2023. 10. 16.|Canvas, Flappy bird                |
-|7.   |2023. 10. 23.|Elmarad                    |
+|     |2023. 10. 23.|Elmarad                    |
 |     |2023. 10. 30.|Elmarad (őszi szünet)      |
-|8.   |2023. 11. 06.|PHP alapok, HTML generálás |
-|9.   |2023. 11. 13.|Űrlapfeldolgozás           |
-|10.  |2023. 11. 20.|Fájlkezelés, adattárolás   |
-|11.  |2023. 11. 27.|CsoportZH, munkamenet      |
-|12.  |2023. 12. 03.|AJAX I.|
-|13.  |2023. 12. 10.|AJAX II.                      |
+|7.   |2023. 11. 06.|PHP alapok, HTML generálás |
+|8.   |2023. 11. 13.|Űrlapfeldolgozás           |
+|9.   |2023. 11. 20.|Fájlkezelés, adattárolás   |
+|10.  |2023. 11. 27.|CsoportZH, munkamenet      |
+|11.  |2023. 12. 03.|AJAX I.|
+|12.  |2023. 12. 10.|AJAX II.                      |
 
 ## [Követelmények](https://canvas.elte.hu/courses/38953/pages/kovetelmenyek?module_item_id=546551)
 
