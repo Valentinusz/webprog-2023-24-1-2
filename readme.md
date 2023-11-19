@@ -15,8 +15,8 @@
 |7.   |2023. 11. 06.|PHP alapok, HTML generálás |
 |8.   |2023. 11. 13.|Űrlapfeldolgozás           |
 |9.   |2023. 11. 20.|Fájlkezelés, adattárolás   |
-|10.  |2023. 11. 27.|CsoportZH, munkamenet      |
-|11.  |2023. 12. 03.|AJAX I.|
+|10.  |2023. 11. 27.|CsoportZH, apróságok       |
+|11.  |2023. 12. 03.|Munkamenet, AJAX I.|
 |12.  |2023. 12. 10.|AJAX II.                      |
 
 ## [Követelmények](https://canvas.elte.hu/courses/38953/pages/kovetelmenyek?module_item_id=546551)
