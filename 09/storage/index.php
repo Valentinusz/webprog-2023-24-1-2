@@ -1,6 +1,8 @@
 <?php
 
-$contacts = json_decode(file_get_contents('data.json'), true);
+require_once 'ContactStorage.php';
+
+$contacts = new ContactStorage();
 
 ?>
 
@@ -20,14 +22,18 @@ $contacts = json_decode(file_get_contents('data.json'), true);
             <th>Név</th>
             <th>Email</th>
             <th>Telefonszám</th>
+            <th></th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
-    <?php foreach ($contacts as $contact): ?>
+    <?php foreach ($contacts->findAll() as $id => $contact): ?>
         <tr>
             <td><?= $contact['name'] ?></td>
             <td><?= $contact['email'] ?></td>
             <td><?= $contact['phone'] ?? '-' ?></td>
+            <td><a href='update.php?id=<?= $id ?>'>Módosítás</a></td>
+            <td><form action='delete.php?id=<?= $id ?>' method='post'><button>Törlés</button></form></td>
         </tr>
     <?php endforeach; ?>
     </tbody>

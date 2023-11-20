@@ -1,5 +1,21 @@
 <?php
 
+if (!isset($_GET['id'])) {
+    header('Location: index.php');
+    exit();
+}
+
+require_once 'ContactStorage.php';
+
+$contacts = new ContactStorage();
+
+$contactToUpdate = $contacts->findById($_GET['id']);
+
+if ($contactToUpdate == null) {
+    header('Location: index.php');
+    exit();
+}
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $errors = [];
 
@@ -9,8 +25,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } else {
         if (strlen($name) > 32) {
             $errors['name'] = 'A név hossza maximálisan 32 karakter lehet.';
-        } else if ($name !== strip_tags($name)) {
-            $errors['name'] = 'A név illegálás karaktereket tartalmaz.';
         }
     }
 
@@ -33,13 +47,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     if(count($errors) === 0) {
-        require_once 'ContactStorage.php';
+        $newValue = ['name' => $name, 'email' => $email, 'phone' => strlen($phone) === 0 ? null : $phone];
 
-        $newEntry = ['name' => $name, 'email' => $email, 'phone' => strlen($phone) === 0 ? null : $phone];
-
-        $contacts = new ContactStorage();
-        $contacts->add($newEntry);
-
+        $contacts->update($_GET['id'], $newValue);
+        
         header('Location: index.php');
         exit();
     }
@@ -55,17 +66,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
     <form method='post' action='' novalidate>
         <label for='name'>Név*</label>
-        <input id='name' name='name' value='<?= $name ?? '' ?>' required>
+        <input id='name' name='name' value='<?= $name ?? $contactToUpdate['name'] ?>' required>
         <?php if(isset($errors['name'])): ?><span><?= $errors['name'] ?></span><?php endif; ?>
         <br>
 
         <label for='email'>Email*</label>
-        <input id='email' name='email' value='<?= $email ?? '' ?>'>
+        <input id='email' name='email' value='<?= $email ?? $contactToUpdate['email'] ?>'>
         <?php if(isset($errors['email'])): ?><span><?= $errors['email'] ?></span><?php endif; ?>
         <br>
 
         <label for='phone'>Telefonszám</label>
-        <input id='phone' name='phone' value='<?= $phone ?? '' ?>'>
+        <input id='phone' name='phone' value='<?= $phone ?? $contactToUpdate['phone'] ?>'>
         <?php if(isset($errors['phone'])): ?><span><?= $errors['phone'] ?></span><?php endif; ?>
         <br>
 
