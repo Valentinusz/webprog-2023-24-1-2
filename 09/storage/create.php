@@ -1,4 +1,5 @@
 <?php
+require_once 'ContactStorage.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $errors = [];
@@ -33,8 +34,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     if(count($errors) === 0) {
-        require_once 'ContactStorage.php';
-
         $newEntry = ['name' => $name, 'email' => $email, 'phone' => strlen($phone) === 0 ? null : $phone];
 
         $contacts = new ContactStorage();

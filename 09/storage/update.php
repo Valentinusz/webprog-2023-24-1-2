@@ -1,5 +1,6 @@
 <?php
 
+// ha nincs azonosító paraméter irányítsuk vissza a felhasználót
 if (!isset($_GET['id'])) {
     header('Location: index.php');
     exit();
@@ -11,6 +12,7 @@ $contacts = new ContactStorage();
 
 $contactToUpdate = $contacts->findById($_GET['id']);
 
+// ha nincs ilyen rekord szintén
 if ($contactToUpdate == null) {
     header('Location: index.php');
     exit();

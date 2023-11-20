@@ -1,5 +1,6 @@
 <?php
 
+// validációért lásd előző gyakorlat
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $errors = [];
 
@@ -32,12 +33,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if(count($errors) === 0) {
         $newEntry = ['name' => $name, 'email' => $email, 'phone' => strlen($phone) === 0 ? null : $phone];
-
+		
+		
         $contacts = json_decode(file_get_contents('data.json'), true);
 
+
+		// unique id egyedi azonosítót állít elő
         $contacts[uniqid()] = $newEntry;
 
+		// file_put_contents, string beírása fájlba
+        // json_encode, értéket JSON-é alakítja
+        // JSON_PRETTY_PRINT embernek is olvasható formátumban
         file_put_contents('data.json', json_encode($contacts, JSON_PRETTY_PRINT));
+		
+		// fejléc küldése a kliensnek
+        // Location átirányítja a klienst
+        header('Location: index.php');
+        exit(); // szkript futna tovább exit()-el tudunk kilépni
     }
 }
 ?>

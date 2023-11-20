@@ -32,7 +32,10 @@ $contacts = new ContactStorage();
             <td><?= $contact['name'] ?></td>
             <td><?= $contact['email'] ?></td>
             <td><?= $contact['phone'] ?? '-' ?></td>
+			<!-- Módosító link -->
             <td><a href='update.php?id=<?= $id ?>'>Módosítás</a></td>
+			
+			<!-- Törlő űrlap -->
             <td><form action='delete.php?id=<?= $id ?>' method='post'><button>Törlés</button></form></td>
         </tr>
     <?php endforeach; ?>
