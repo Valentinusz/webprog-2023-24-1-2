@@ -15,7 +15,7 @@
 |7.   |2023. 11. 06.|PHP alapok, HTML generálás |
 |8.   |2023. 11. 13.|Űrlapfeldolgozás           |
 |9.   |2023. 11. 20.|Fájlkezelés, adattárolás   |
-|10.  |2023. 11. 27.|CsoportZH, apróságok       |
+|10.  |2023. 11. 27.|CsoportZH       |
 |11.  |2023. 12. 03.|Autentikáció, munkamenet|
 |12.  |2023. 12. 10.|AJAX                      |
 
