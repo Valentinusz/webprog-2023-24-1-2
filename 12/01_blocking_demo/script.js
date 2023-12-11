@@ -30,7 +30,10 @@ document.querySelector('#blocking').addEventListener('click', () => {
 // setTimeout, setInterval, addEventListener nem blokkolnak
 // ezt már láttuk
 
+
+
 setTimeout(() => {
     console.log("asd");
 }, 10000)
 
+console.log("asd2");

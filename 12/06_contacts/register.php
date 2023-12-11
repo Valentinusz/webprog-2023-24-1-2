@@ -54,6 +54,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <main>
         <h1>Regisztráció</h1>
         <form method="post">
+            <div id='taken-error' class='error' hidden=''>
+                A felhasználónév foglalt.
+            </div>
             <label for="username">Név*</label>
             <input id="username" name="username" value="<?= $username ?? "" ?>">
             <?php if(isset($errors["username"])): ?><span class="error"><?= $errors["username"] ?></span><?php endif; ?>
@@ -65,5 +68,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             <button type="submit">Regisztráció</button>
         </form>
     </main>
+    <script src='resources/js/register.js'></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-const a = 7;
+const a = 6;
 
 const promise = new Promise((resolve, reject) => {
     // művelet szimulálás

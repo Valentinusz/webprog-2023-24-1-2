@@ -42,6 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             "name" => $name,
             "email" => $email,
             "phone" => $phone === "" ? null : $phone,
+            "note" => "",
             "user_id" => $auth->authenticated_user()['id']
         ]);
 

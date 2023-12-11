@@ -14,5 +14,13 @@
             "user"
         ],
         "id": "656dacb53a506"
+    },
+    "6576e3c517bd3": {
+        "username": "asd3",
+        "password": "$2y$10$wavAClP40Qtp.SOvpjValew3LRLqkIoVl0sMHSCKjr8oH8kOVJEZ6",
+        "roles": [
+            "user"
+        ],
+        "id": "6576e3c517bd3"
     }
 }
